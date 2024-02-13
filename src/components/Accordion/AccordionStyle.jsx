@@ -3,22 +3,21 @@ import styled from "styled-components";
 export const AccordionStyle = styled.div`
     max-width: 60rem;
     width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 5rem 0 ;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background: var(--color-bg-3);
 
     .btn {
         padding: 1rem 2rem;
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         background-color: var(--color-bg-2);
-        transition: transform .1s;
+        transition: all 0.1s;
+        border: 1px solid #333;
+        background: var(--color-bg-3);
+        width: 55%;
 
         &:active {
             transform: translateY(-1px);
@@ -28,6 +27,7 @@ export const AccordionStyle = styled.div`
     .accordion {
         width: 100%;
         box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+        background: var(--color-bg-3);
     }
 
     .item {
@@ -36,41 +36,54 @@ export const AccordionStyle = styled.div`
 
     .title {
         background-color: var(--color-grey-1);
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 3px 6px rgba(255, 255, 255, 0.08);
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 2rem;
         cursor: pointer;
 
-        h3 {
-            font-size: 1.6rem;
+        h4 {
+            font-size: 1.8rem;
         }
 
         .icon {
             width: 1.5rem;
             height: 1.5rem;
             display: flex;
-            flex-direction: column;
+            /* flex-direction: column; */
             align-items: center;
             justify-content: center;
 
             span {
                 width: 100%;
                 height: 2px;
-                margin-top: -2px;
-                background-color: var(--color-text-2);
+                /* margin-top: -2px; */
+                background-color: var(--color-text-1);
+                transition: all 0.3s ease-out;
 
                 &:first-child {
-                    transform: rotate(-90deg);
-                    transition: all 0.3s ease-out;
+                    /* transform: rotate(-90deg); */
+                    margin-right: -2px;
+                    transform: rotate(40deg);
+                }
+
+                &:last-child {
+                    margin-left: -2px;
+                    transform: rotate(-40deg);
                 }
             }
         }
 
         &.active {
             .icon span:first-child {
-                transform: rotate(0deg);
+                /* transform: rotate(0deg); */
+                transform: rotate(-40deg);
+            }
+
+            .icon span:last-child {
+                /* transform: rotate(0deg); */
+                transform: rotate(40deg);
             }
         }
 
@@ -97,6 +110,6 @@ export const AccordionStyle = styled.div`
     .content {
         background-color: var(--color-grey-3);
         padding: 1.2rem 2rem;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
 `;

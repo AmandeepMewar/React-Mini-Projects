@@ -2,7 +2,7 @@ import { useState } from "react";
 import { RandomColorStyle } from "./RandomColorStyle";
 export default function RandomColor() {
     const [typeOfColor, setTypeOfColor] = useState("hex");
-    const [color, setColor] = useState("#130f40");
+    const [color, setColor] = useState("#0f172a");
 
     const createRandomColor = () => {
         if (typeOfColor === "hex") {
@@ -45,28 +45,30 @@ export default function RandomColor() {
     return (
         <div className="wrapper">
             <RandomColorStyle style={{ background: color }}>
-                <div className="color-heading">
-                    <h1>{color}</h1>
-                </div>
-                <div className="type-of-color">
-                    <button
-                        className="btn"
-                        onClick={() => setTypeOfColor("hex")}
-                    >
-                        Create HEX Color
-                    </button>
-                    <button
-                        className="btn"
-                        onClick={() => setTypeOfColor("rgb")}
-                    >
-                        Create RGB Color
-                    </button>
-                </div>
+                <div className="box">
+                    <div className="color-heading">
+                        <h1>{color}</h1>
+                    </div>
+                    <div className="type-of-color">
+                        <button
+                            className="btn"
+                            onClick={() => setTypeOfColor("hex")}
+                        >
+                            Create HEX Color
+                        </button>
+                        <button
+                            className="btn"
+                            onClick={() => setTypeOfColor("rgb")}
+                        >
+                            Create RGB Color
+                        </button>
+                    </div>
 
-                <div className="create">
-                    <button className="btn" onClick={createRandomColor}>
-                        Generate Random Color
-                    </button>
+                    <div className="create">
+                        <button className="btn" onClick={createRandomColor}>
+                            Generate Random Color
+                        </button>
+                    </div>
                 </div>
             </RandomColorStyle>
         </div>

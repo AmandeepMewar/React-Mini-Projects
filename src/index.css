@@ -6,7 +6,8 @@
     --color-bg-3: #111827;
 
     --color-text-1: #cbd5e1;
-    --color-text-2: #d1d5db;
+    --color-text-2: #0ea5e9;
+    --color-text-3: #0f172a;
 
     --color-border-1: #64748b;
     --color-border-2: #94a3b8;
@@ -55,6 +56,12 @@ button {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    user-select: none;
 }
 
 .wrapper {

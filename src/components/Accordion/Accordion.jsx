@@ -4,25 +4,33 @@ import { AccordionStyle } from "./AccordionStyle";
 
 export default function Accordion() {
     const [single, setSingle] = useState(null);
-    const [multiSelection, setMultiSelection] = useState(false);
+    const [enableMultiSelect, setEnableMultiSelect] = useState(false);
     const [multiple, setMultiple] = useState([]);
 
     const handleSelection = () => {
-        setMultiSelection((prev) => !prev);
+        setEnableMultiSelect((prev) => !prev);
+        setMultiple([]);
+        setSingle(null);
     };
 
     const handleSingleSelection = (ItemId) => {
-        console.log(ItemId);
         setSingle(single === ItemId ? null : ItemId);
     };
 
-    const handleMultipleSelection = (ItemId) => {};
+    const handleMultipleSelection = (ItemId) => {
+        if (multiple.includes(ItemId)) {
+            setMultiple(multiple.filter((id) => id !== ItemId));
+        } else {
+            setMultiple([...multiple, ItemId]);
+        }
+    };
 
     return (
         <div className="wrapper">
             <AccordionStyle>
                 <button className="btn" onClick={handleSelection}>
-                    {multiSelection ? "Enable" : "Disable"} Mutliple Selection
+                    {enableMultiSelect ? "Disable" : "Enable"} Mutliple
+                    Selection
                 </button>
 
                 <div className="accordion">
@@ -31,19 +39,24 @@ export default function Accordion() {
                             <div className="item" key={dataItem.id}>
                                 <div
                                     onClick={() =>
-                                        handleSingleSelection(dataItem.id)
+                                        enableMultiSelect
+                                            ? handleMultipleSelection(
+                                                  dataItem.id
+                                              )
+                                            : handleSingleSelection(dataItem.id)
                                     }
                                     className={`title ${
                                         single === dataItem.id ? "active" : ""
                                     }`}
                                 >
-                                    <h3>{dataItem.question}</h3>
+                                    <h4>{dataItem.question}</h4>
                                     <div className="icon">
                                         <span></span>
                                         <span></span>
                                     </div>
                                 </div>
-                                {single === dataItem.id ? (
+                                {single === dataItem.id ||
+                                multiple.includes(dataItem.id) ? (
                                     <div className="content">
                                         {dataItem.answer}
                                     </div>

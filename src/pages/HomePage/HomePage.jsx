@@ -7,7 +7,7 @@ export default function HomePage() {
     return (
         <HomePageStyle>
             <header>
-                <h1>React Mini Projects</h1>
+                <h1>React Mini-Projects</h1>
             </header>
 
             <CardStyle>
@@ -15,6 +15,18 @@ export default function HomePage() {
                     <HomeCard key={item.id} {...item} />
                 ))}
             </CardStyle>
+
+            <footer>
+                <p>
+                    Built By |&nbsp;
+                    <a
+                        href="https://github.com/AmandeepMewar/React-Mini-Projects"
+                        target="_blank"
+                    >
+                        Amandeep Mewar
+                    </a>
+                </p>
+            </footer>
         </HomePageStyle>
     );
 }
