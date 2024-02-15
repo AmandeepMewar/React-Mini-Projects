@@ -14,6 +14,15 @@
     --color-border-3: #6b7280;
 }
 
+*::-webkit-scrollbar {
+    background-color: #fff;
+    width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #6b7280;
+}
+
 *,
 *::before,
 *::after {
@@ -27,7 +36,7 @@ html {
     font-size: 62.5%;
 
     @media only screen and (max-width: 600px) {
-        font-size: 37.5%;
+        font-size: 50%;
     }
 }
 
@@ -51,6 +60,11 @@ textarea {
 
 button {
     cursor: pointer;
+    user-select: none;
+}
+
+ul {
+    list-style-type: none;
 }
 
 a {

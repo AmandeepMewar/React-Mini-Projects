@@ -12,7 +12,6 @@ export const ImageSliderStyle = styled.div`
         height: 40rem;
         box-sizing: 0px 0px 7px #666;
         object-fit: cover;
-
     }
 
     .hide-current-image {
@@ -26,6 +25,11 @@ export const ImageSliderStyle = styled.div`
         color: rgba(255, 255, 255, 0.5);
         filter: drop-shadow(0px 0px 5px #555);
         z-index: 10;
+        transition: transform .1s;
+
+        &:hover {
+            transform: scale(1.2);
+        }
     }
 
     .arrow-left {
@@ -48,8 +52,11 @@ export const ImageSliderStyle = styled.div`
         width: 1.5rem;
         margin: 0 0.2rem;
         border-radius: 50%;
-        display: grid;
-        place-items: center;
+        transition: transform .1s;
+
+        &:hover {
+            transform: scale(1.2);
+        }
 
     }
 

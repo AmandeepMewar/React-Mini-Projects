@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const AccordionStyle = styled.div`
     max-width: 60rem;
     width: 100%;
-    margin: 5rem 0 ;
+    margin: 5rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,10 +13,10 @@ export const AccordionStyle = styled.div`
     .btn {
         padding: 1rem 2rem;
         font-size: 1.8rem;
-        background-color: var(--color-bg-2);
+        background-color: var(--color-bg-3);
         transition: all 0.1s;
         border: 1px solid #333;
-        background: var(--color-bg-3);
+
         width: 55%;
 
         &:active {
@@ -25,18 +25,18 @@ export const AccordionStyle = styled.div`
     }
 
     .accordion {
-        width: 100%;
-        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+        width: 95%;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
         background: var(--color-bg-3);
     }
 
     .item {
-        border: 1px solid var(--color-border-3);
+        border: 1px solid #333;
     }
 
     .title {
         background-color: var(--color-grey-1);
-        box-shadow: 0 3px 6px rgba(255, 255, 255, 0.08);
+        box-shadow: 0 3px 4px rgba(255, 255, 255, 0.05);
         display: flex;
         justify-content: space-between;
         align-items: center;
