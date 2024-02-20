@@ -5,10 +5,11 @@ export const ImageSliderStyle = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60rem;
+    max-width: 60rem;
+    margin: 1rem;
 
     .current-image {
-        width: 60rem;
+        width: 100%;
         height: 40rem;
         box-sizing: 0px 0px 7px #666;
         object-fit: cover;
@@ -25,7 +26,7 @@ export const ImageSliderStyle = styled.div`
         color: rgba(255, 255, 255, 0.5);
         filter: drop-shadow(0px 0px 5px #555);
         z-index: 10;
-        transition: transform .1s;
+        transition: transform 0.1s;
 
         &:hover {
             transform: scale(1.2);
@@ -48,16 +49,15 @@ export const ImageSliderStyle = styled.div`
 
     .current-indicator {
         background-color: #fff;
-        height: 1.5rem;
-        width: 1.5rem;
+        height: 1.2rem;
+        width: 1.2rem;
         margin: 0 0.2rem;
         border-radius: 50%;
-        transition: transform .1s;
+        transition: transform 0.1s;
 
         &:hover {
             transform: scale(1.2);
         }
-
     }
 
     .inactive-indicator {

@@ -24,6 +24,8 @@ A collection of commonly used functional components for web development, built w
 
 9.  Tabs
 
+10. Modal
+
 ## Installation
 
 1. Clone this repository on your local machine.
@@ -33,6 +35,8 @@ A collection of commonly used functional components for web development, built w
 3. Start the development server: `npm run dev`
 
 4. Open your web browser and visit `http://localhost:3000` to access the application.
+
+## License
 
 ## Contributions
 

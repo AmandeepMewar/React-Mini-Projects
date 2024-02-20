@@ -44,6 +44,11 @@ const HomeData = [
         title: "Tabs",
         path: "/tabs",
     },
+    {
+        id: 10,
+        title: "Modal",
+        path: "/modal",
+    },
 ];
 
 export default HomeData;

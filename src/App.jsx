@@ -19,6 +19,7 @@ import ThemeSwitch from "./components/ThemeSwitch/ThemeSwitch";
 import menuData from "./components/TreeView/TreeViewData";
 import ScrollProgress from "./components/ScrollProgress/ScrollProgress";
 import Tabs from "./components/Tabs/Tabs";
+import Modal from "./components/Modal/Modal";
 
 const routerDefinitions = createRoutesFromElements(
     <Route errorElement={<Error404 />}>
@@ -44,6 +45,7 @@ const routerDefinitions = createRoutesFromElements(
             }
         />
         <Route path="/tabs" element={<Tabs />} />
+        <Route path="/modal" element={<Modal />} />
     </Route>
 );
 
